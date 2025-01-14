@@ -11,7 +11,22 @@ function object_print()
 		show_age: function()
 		{
 			alert("年齢は"+this.age+"です");
+		},
+
+		// 引数ありのメソッド
+		set_age: function(age)
+		{
+			this.age = age;
+			return 0;
+		},
+
+		// ES2015からは以下にも書ける
+		set_weight(weight)
+		{
+			this.weight = weight;
+			return 0;
 		}
+
 	};
 
 	alert(person.age);	// オブジェクトのプロパティへのアクセスは.を使う
@@ -29,8 +44,11 @@ function object_print()
 	alert(person.TV);
 
 	// メソッドの呼び出し
+
+	person.set_age(50);
+	person.set_weight(100);
 	person.show_age();
 
 	//personオブジェクト自身の変更はエラーになる
-//	person=40;
+	person=40;
 }
