@@ -50,5 +50,5 @@ function object_print()
 	person.show_age();
 
 	//personオブジェクト自身の変更はエラーになる
-	person=40;
+//	person=40;
 }
